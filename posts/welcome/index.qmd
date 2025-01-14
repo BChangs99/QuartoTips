@@ -1,0 +1,59 @@
+---
+title: "Tips to make your life easier with Quarto!"
+author: "Brian Chang"
+date: "2025-01-13"
+categories: [Blog]
+---
+
+<h1>Make your life easier with the VSCode Quarto extension 😌🚀🤓</h1>
+
+<h2>Introduction</h2>
+
+[Quarto](https://quarto.org/) is a convenient data science tool for Non-Web Developers to convert their Python or R notebooks into reproducible, production quality content in a variety of mediums. However, to those unfamiliar (like me), it can feel counterproductive to be using Quarto when you're just trying to focus on the content creation. 
+
+During my Masters at UBC, I had to use Quarto to create a report for a group project ([👉 Shameless self plug 👈](https://ubc-mds.github.io/DSCI522-2425-25-heart_disease_predictor)). While Quarto felt powerful, the learning curve and my unfamiliartiy with it slowed me down. So, I spent a bit of time looking into what could help me streamline my workflow. 
+
+In this tutorial, I'll share the three practical tips that helped me maintain productivity without getting bogged down on the annoying side of Quarto. Let's start with the most basic tip: setting up a Quarto project quickly in VSCode.
+
+<h2>Skip The Command Line! 🧑‍💻</h2>
+A CLI (Command Line Interface) is great when you're familiar with the commands! But if you're just starting out, I find it more intuitive to work with visual navigation. This really helps when you don't remember the exact commands you need to run things. 
+
+The first thing we need to do is install the Quarto extension. First navigate to the extensions tab in VSCode (@fig-extension). You can also press `CMD + Shift + X` on Mac or `CTRL + Shift + X` on Windows.
+
+![](../../assets/Extensions.png){#fig-extension width=300 style="display: block; margin: auto;"}
+
+Then from here you want to type in Quarto and click on the Install button (where my uninstall button is) to get Quarto installed on your VSCode (@fig-install).
+
+![](../../assets/Install.png){#fig-install style="display: block; margin: auto;"}
+
+Now for the crux of the matter, let's create a project using VSCode! We now want to open up the [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette). This is basically where VSCode lets you access all the command configurations of the IDE. It lets you find all the keyboard shortcuts of VSCode and even make new ones for yourself! This is also where we'll be exploring our first command: Quarto Create Project.
+
+To open up the command palette (@fig-cmd-pal), we can either click on the gear icon on the bottom left and click on it directly, or we can press `CMD + Shift + P` if you're on Mac or `CTRL + Shift + P` on Windows. From here we'll begin typing "Quarto Create Project" and click on the first dropdown. Now you can specify what type of project by selecting them and a window will pop open for you to select where you want this directory.
+
+![](../../assets/create_project.gif){#fig-cmd-pal}
+
+Using the Quarto extension, we were able to skip having to remember the commands for creating all the types of projects Quarto offers. With the project all set up, the next step in increasing our productivity is making the rendering process easier.
+
+<h1>Automate your workflow 🤖</h1>
+Similar to why we would want to have a visual aid for creating a project, having a quick and convenient button or keyboard shortcut for rendering our project is equally as important for productivity. When you're modifying the content of your report a lot, you constantly need to update your report to preview the latest changes. Although Quarto offers the preview command for this functionality, I've found from personal experience this method inconsistent in displaying my changes. As well, Quarto themselves recommend rendering always rendering the website before deploying it, [as stated in their documentation](https://quarto.org/docs/websites/). 
+
+So reading on Quarto's extensions for the [Preview command](https://quarto.org/docs/tools/vscode.html#render-and-preview), Quarto will perform both Render and Preview for us when we trigger the preview, ensuring the content of our report is always up to date.
+
+To do, we can render and preview our Quarto document by clicking the "Preview" button inside the triple dot dropdown in the top right corner of VSCode @fig-rndr-btn or using the keyboard shortcut `CMD/CTRL + Shift + K`. As well, we can also change the format in which the document is rendered and previewed by clicking on "Preview Format..."
+
+![](../../assets/render_button.png){#fig-rndr-btn}
+
+When I was reading through the Quarto documentation [section on VSCode](https://quarto.org/docs/tools/vscode.html) I found a convenient configuration 'render-on-save'. This allows our entire project to re-render everytime we save the document we're working in. This allows us to stop having to trigger the re-rendering and previews manually, and instead batch the saving and rendering together. As well, within the same documentation I found another configuration that allows our preview windows to always open in another window. This is especially useful for developers who use multiple screens.
+
+To enable these configurations, we need to access our [VSCode Settings Editor](https://code.visualstudio.com/docs/getstarted/settings#:~:text=To%20open%20the%20Settings%20editor,settings%20you%20are%20looking%20for.). This is where we can access all the configurations and settings of the IDE, not to be confused with the Command Palette which is for commands specifically. 
+
+As we can see in @fig-sve-rndr, we can again use the gear icon from @fig-cmd-pal and click on Settings, or we can press `CMD/CTRL + ,`. Now type Quarto to find all the quarto related settings. In here we want to make sure "Quarto > Quarto Render: Render On Save" is checked and "Quarto > Render: Preview Panel" is ticked to what we want.
+
+![](../../assets/save_on_render.gif){#fig-sve-rndr}
+
+Great! We've now streamlined our workflow significantly through automations and shortcuts all thanks to Quarto's VSCode extension. Now the last tip I'll leave you with is streamlining collaboration with others by including child documents. This personally saved me huge headaches with merge conflicts and allowed our group to work concurrently on the same report streamlined. 
+
+<h2>Streamline Collaboration with Child Documents🤝</h2>
+When working on group projects, avoiding conflicts and streamlining contributions can be quite tricky. Quarto offers a good solution by using child documents. These allow each group member to work on different sections of one report, while still having it consolidated together in the end.
+
+
