@@ -11,7 +11,7 @@ categories: [Blog]
 
 [Quarto](https://quarto.org/) is a convenient data science tool for Non-Web Developers to convert their Python or R notebooks into reproducible, production quality content for a variety of mediums. While it offers robust features, for those unfamiliar (like me), it can feel counterproductive to be using Quarto when you're just trying to focus on the creation of content. 
 
-During my Masters at UBC, I used Quarto to create a report for a group project ([👉 Shameless self plug 👈](https://ubc-mds.github.io/DSCI522-2425-25-heart_disease_predictor)). While Quarto felt powerful, the learning curve and my unfamiliartiy with it slowed me down. To overcome this, I explored ways to simplify and optimize my Quarto workflow. 
+During my Masters at UBC, I used Quarto to create a report for a group project ([👉 Shameless self plug 👈](https://ubc-mds.github.io/DSCI522-2425-25-heart_disease_predictor)). While Quarto felt powerful, the learning curve, issues with remembering commands, and collaborating on reports felt daunting. To overcome this, I explored ways to simplify and optimize my Quarto workflow. 
 
 In this tutorial, I'll share the three practical tips that helped me maintain productivity without getting bogged down on the annoying side of Quarto. Let's start with the most basic tip: setting up a Quarto project quickly in VSCode.
 
@@ -43,7 +43,7 @@ To execute the extension's preview command, we can render and preview our Quarto
 
 ![](../../assets/render_button.png){#fig-rndr-btn}
 
-When I was reading through the Quarto documentation [section on VSCode](https://quarto.org/docs/tools/vscode.html), I found a convenient configuration 'render-on-save'. This allows our entire project to re-render everytime we save the document we're working in. This allows us to stop having to trigger the re-rendering and previews manually, and instead batch the document saving and rendering together. This is essential to ensuring we are re-rendering as often as possible to make sure our content is always up to date. As well, within the same documentation I found another configuration that allows our preview windows to always open in another window. This is especially useful for developers who use multiple screens.
+When I was reading through the Quarto documentation [section on VSCode](https://quarto.org/docs/tools/vscode.html), I found a convenient configuration 'render-on-save'. This allows our entire project to re-render every time we save the document we're working in. This allows us to stop having to trigger the re-rendering and previews manually, and instead batch the document saving and rendering together. This is essential to ensuring we are re-rendering as often as possible to make sure our content is always up to date. As well, within the same documentation I found another configuration that allows our preview windows to always open in another window. This is especially useful for developers who use multiple screens.
 
 To enable these configurations, we need to access our [VSCode Settings Editor](https://code.visualstudio.com/docs/getstarted/settings#:~:text=To%20open%20the%20Settings%20editor,settings%20you%20are%20looking%20for.). This is where we can access all the configurations and settings of the IDE, not to be confused with the Command Palette which is for commands specifically. 
 
@@ -54,9 +54,9 @@ As we can see in @fig-sve-rndr, we can again use the gear icon from @fig-cmd-pal
 Great! We've now streamlined our workflow significantly through automations and shortcuts, removing the need for manually re-rendering, saving time, and minimizing areas for potential errors. Now the last tip I'll leave you with is streamlining collaboration with others by including child documents. This personally saved me huge headaches with merge conflicts and allowed our group to work concurrently on the same report in an efficient fashion. 
 
 <h2>Streamline Collaboration with Child Documents 🤝</h2>
-Collaborating on group projects can be challenging, especially when multiple contributors are editing the same document, causing a big headache in potential merge conflicts. [Quarto's child documents feature](https://quarto.org/docs/authoring/includes.html) offers a great solution for tackling exactly this. These child documents allow each group member to work on different sections of one combined report, while still keeping everything consolidated. 
+Collaborating on group projects can be challenging, especially when multiple contributors are editing the same document, causing a big headache in potential merge conflicts. [Quarto's child documents feature](https://quarto.org/docs/authoring/includes.html) offers a great solution for tackling exactly this. These child documents allow each group member to work on different sections of one combined report, while still keeping everything consolidated. What's essentially happening, is the report has been split into multiple sections living in different files, but when you render the report, it will render each child document and feed it into the full parent document.
 
-For example, one can person can be writing in the "Introduction" section of the report while another person can be working on the analysis method. Since both people are working in different files, when it's time to merge, there won't be any merge conflicts. Looking below at @fig-child-docs is the format in which I created my parent document to include all my child documents. For posterity, to include child documents you will want to follow the following syntax:
+For example, one person can be writing in the "Introduction" section of the report while another person can be working on the analysis method. Since both people are working in different files, when it's time to merge, there won't be any merge conflicts. Looking below at @fig-child-docs is the format in which I created my parent document to include all my child documents. For posterity, to include child documents you will want to follow the following syntax:
 
 `{{< include _content.qmd >}}`
 
@@ -68,7 +68,7 @@ There we go! Now you and your team members can rest easy working on your own sec
 
 <h2>Wrapping Up and Next Steps 🌟📘</h2>
 
-Quarto is a pretty powerful tool for creating polished reproducible reports, and with the right configurations and shortcuts, it can feel blazingly fast! In this post, we covered the three key tips I found helpful to streamline your worklflow and allow you to focus on the core content:
+Quarto is a pretty powerful tool for creating polished reproducible reports, and with the right configurations and shortcuts, it can feel blazingly fast! In this post, we covered the three key tips I found helpful to streamline your workflow and allow you to focus on the core content:
 
 **Skip the Command Line**: Set up projects easily in VSCode using the Quarto extension
 
